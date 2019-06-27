@@ -9,5 +9,8 @@
   "license": "MIT",
   "devDependencies": {
     "less": "^3.9.0"
+  },
+  "dependencies": {
+    "bootstrap": "^3.4.1"
   }
 }
