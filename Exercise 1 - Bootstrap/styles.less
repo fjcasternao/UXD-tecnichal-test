@@ -3,6 +3,9 @@
 @dot-spacing:  20px;
 @dot-size: 1px;
 
+@openshift-red: #c00;
+@openshift-red--dark: #470000;
+
 
 
 body {
@@ -13,4 +16,33 @@ body {
     -webkit-background-size: @dot-spacing @dot-spacing;
     -moz-background-size: @dot-spacing @dot-spacing;
     background-size: @dot-spacing @dot-spacing;
+}
+
+.openshift-panel {
+    position: fixed;
+    background: white;
+    top: 200px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.69);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.69);
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.69);
+
+    .openshift-panel__heading {
+        display: flex;
+        color: white;
+        background-color: @openshift-red;
+        padding: 15px 10px;
+
+        .heading-title {
+            flex: 1;
+        }
+        .heading-version {
+            background-color: @openshift-red--dark;
+            padding: 0 10px;
+        }
+    }
+
+    .openshift-panel__body{
+        height: 110px;
+    }
+
 }
