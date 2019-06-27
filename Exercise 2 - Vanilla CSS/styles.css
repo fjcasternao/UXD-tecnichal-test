@@ -1,9 +1,25 @@
 body {
-    font-family: 'Overpass', Arial, sans-serif
+    font-family: 'Overpass', Arial, sans-serif;
+    background-color: lightgray;
+    height: 100%;
+    margin: 0px;
+    position: relative;
 }
 
 .openshift-container {
     background: white;
+    max-width: 800px;
+    margin: 0;
+    position: absolute;
+}
+
+@media (min-width: 768px) {
+    .openshift-container {
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }
 
 
