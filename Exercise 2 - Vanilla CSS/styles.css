@@ -1,3 +1,69 @@
 body {
     font-family: 'Overpass', Arial, sans-serif
 }
+
+.openshift-container {
+    background: white;
+}
+
+.openshift-header {
+    display: flex;
+    background: red;
+    color: white;
+}
+
+.openshift-header__title {
+    flex: 1;
+}
+
+.openshift-header__menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.menu__item {
+    float: left;
+}
+
+.menu__item a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu__item a:hover {
+    background-color: #470000;
+}
+
+.menu__item a.active {
+    background-color: #470000;
+}
+
+.openshift-content {
+    padding: 0 15px;
+}
+
+.description__content {
+    font-weight: 700;
+}
+
+.openshift-case {
+    padding: 20px 0;
+}
+
+.openshift-case__key {
+    display: flex;
+}
+
+.case-key__label {
+    flex: 1;
+    font-weight: 700;
+}
+
+.case-key__value {
+    flex: 2;
+}
