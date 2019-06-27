@@ -1,0 +1,13 @@
+{
+  "name": "exercise1-bootstrap",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lessCompile": "lessc styles.less styles.css"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "less": "^3.9.0"
+  }
+}
