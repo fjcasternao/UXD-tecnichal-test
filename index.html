@@ -1,0 +1,248 @@
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        #exercise1 {
+            background-image: -webkit-repeating-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+            background-image: -moz-repeating-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+            background-image: -ms-repeating-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+            background-image: repeating-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 1px, transparent 1px, transparent 100%);
+            -webkit-background-size: 20px 20px;
+            -moz-background-size: 20px 20px;
+            background-size: 20px 20px;
+            height: 100%;
+        }
+        
+        .openshift-panel {
+            position: fixed;
+            background: white;
+            top: 200px;
+            -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.69);
+            -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.69);
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.69);
+        }
+        
+        .openshift-panel .openshift-panel__heading {
+            display: flex;
+            color: white;
+            background-color: #c00;
+            padding: 15px 10px;
+        }
+        
+        .openshift-panel .openshift-panel__heading .heading-title {
+            flex: 1;
+        }
+        
+        .openshift-panel .openshift-panel__heading .heading-version {
+            background-color: #470000;
+            padding: 0 10px;
+        }
+        
+        .openshift-panel .openshift-panel__body {
+            height: 110px;
+        }
+    </style>
+
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Overpass+Mono:300,400,600,700|Overpass:100,100i,200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext">
+    <style>
+        body {
+            font-family: 'Overpass', Arial, sans-serif;
+            background-color: #bbb;
+            background-image: linear-gradient(to bottom, #bbb, #ededed);
+            height: 100%;
+            margin: 0px;
+            position: relative;
+        }
+        
+        .openshift-container {
+            background: white;
+            max-width: 800px;
+            padding: 1px;
+            margin: 0;
+            position: absolute;
+            -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+        
+        @media (min-width: 768px) {
+            .openshift-container {
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+        /* Header and menu definitions */
+        
+        .openshift-header {
+            display: flex;
+            background-color: #c00;
+            background-image: linear-gradient(to bottom, #c00, #470000);
+            color: white;
+        }
+        
+        .openshift-header__title {
+            flex: 1;
+            padding: 16px;
+            font-weight: 700;
+        }
+        
+        .openshift-header__menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .menu__item {
+            float: left;
+        }
+        
+        .menu__item a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+            border-left: 1px solid white;
+        }
+        
+        .menu__item a:hover,
+        .menu__item a.active {
+            -webkit-box-shadow: inset 0px 0px 10px 3px rgba(71, 0, 0, 0.75);
+            -moz-box-shadow: inset 0px 0px 10px 3px rgba(71, 0, 0, 0.75);
+            box-shadow: inset 0px 0px 10px 3px rgba(71, 0, 0, 0.75);
+        }
+        /* Content base styling */
+        
+        .openshift-content {
+            padding: 0 15px;
+        }
+        
+        .description__content {
+            font-weight: 700;
+        }
+        /* Styles for case details section */
+        
+        .openshift-case {
+            padding: 20px 0;
+        }
+        
+        .openshift-case__key {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .case-key__label {
+            flex: 1;
+            font-weight: 700;
+        }
+        
+        .case-key__value {
+            flex: 2;
+        }
+        /* Definitions of statuses badges */
+        
+        .status {
+            background-color: grey;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .status.active {
+            background-color: green;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="container-fluid">
+
+    <button onclick="show1()">Show Exercise 1</button>
+    <button onclick="show2()">Show Exercise 2</button>
+
+    <div id="exercise1" style="display: none;">
+        <div class="row">
+            <div class="col-md-2 col-xs-12 col-md-offset-4 hidden-sm openshift-panel">
+                <div class="row openshift-panel__heading">
+                    <span class="heading-title">OpenShift</span>
+                    <span class="heading-version">4</span>
+                </div>
+                <div class="row openshift-panel__body"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="openshift-container" style="display: none" id="exercise2">
+
+        <div class="openshift-header">
+            <span class="openshift-header__title">OpenShift</span>
+            <ul class="openshift-header__menu">
+                <li class="menu__item"><a href="#item1" class="active">Item</a></li>
+                <li class="menu__item"><a href="#item2">Item</a></li>
+                <li class="menu__item"><a href="#item3">Item</a></li>
+            </ul>
+        </div>
+
+        <div class="openshift-content">
+
+            <div class="openshift-content__description">
+                <h2 class="description__title">Panel content</h2>
+                <div class="description__content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt esse cillum dolore eu deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+
+            <div class="openshift-case">
+                <div class="openshift-case__key">
+                    <div class="case-key__label">Case ID: </div>
+                    <div class="case-key__value">Case0002b </div>
+                </div>
+
+                <div class="openshift-case__key">
+                    <div class="case-key__label">Case Name: </div>
+                    <div class="case-key__value">Development case instance</div>
+                </div>
+                <div class="openshift-case__key">
+                    <div class="case-key__label">Status: </div>
+                    <div class="case-key__value">
+                        <span class="status active">
+                                    Active
+                            </span>
+                    </div>
+                </div>
+                <div class="openshift-case__key">
+                    <div class="case-key__label">State: </div>
+                    <div class="case-key__value">Started on March 16th, 2017</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    function show1() {
+        document.getElementById("exercise1").style.display = 'block';
+        document.getElementById("exercise2").style.display = 'none';
+    }
+
+    function show2() {
+        document.getElementById("exercise2").style.display = 'block';
+        document.getElementById("exercise1").style.display = 'none';
+    }
+</script>
+
+</html>
