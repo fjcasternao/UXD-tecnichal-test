@@ -1,6 +1,7 @@
 body {
     font-family: 'Overpass', Arial, sans-serif;
-    background-color: lightgray;
+    background-color: #bbb;
+    background-image: linear-gradient(to bottom, #bbb, #ededed);
     height: 100%;
     margin: 0px;
     position: relative;
@@ -9,8 +10,12 @@ body {
 .openshift-container {
     background: white;
     max-width: 800px;
+    padding: 1px;
     margin: 0;
     position: absolute;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 768px) {
@@ -29,8 +34,6 @@ body {
     display: flex;
     background-color: #c00;
     background-image: linear-gradient(to bottom, #c00, #470000);
-    /* Standard syntax; must be last */
-    margin: 1px;
     color: white;
 }
 
