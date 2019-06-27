@@ -1,9 +1,16 @@
+// Variables
+@dot-color:        rgba(0,0,0,.2);
+@dot-spacing:  20px;
+@dot-size: 1px;
+
+
+
 body {
-    background-image: -webkit-repeating-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    background-image: -moz-repeating-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    background-image: -ms-repeating-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
-    -webkit-background-size: 20px 20px;
-    -moz-background-size: 20px 20px;
-    background-size: 20px 20px;
+    background-image: -webkit-repeating-radial-gradient(@dot-color, @dot-color @dot-size, transparent @dot-size, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(@dot-color, @dot-color @dot-size, transparent @dot-size, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(@dot-color, @dot-color @dot-size, transparent @dot-size, transparent 100%);
+    background-image: repeating-radial-gradient(@dot-color, @dot-color @dot-size, transparent @dot-size, transparent 100%);
+    -webkit-background-size: @dot-spacing @dot-spacing;
+    -moz-background-size: @dot-spacing @dot-spacing;
+    background-size: @dot-spacing @dot-spacing;
 }
